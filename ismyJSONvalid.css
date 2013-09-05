@@ -1,0 +1,196 @@
+@font-face {
+    font-family: SonsieOne;
+    src: url('./fonts/SonsieOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: FingerPaint;
+    src: url('./fonts/FingerPaint-Regular.ttf');
+}
+
+body, html {
+    /*background: url(./images/floralflure.png) -3em 6em no-repeat;*/
+    background-color: #E0C6A2;
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    background-color: #6F4C30;
+    height: 9em;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.footer {
+    font-family: Verdana;
+    background-color: #6F4C30;
+    width: 100%;
+    height: 5em;
+    position: absolute;
+    text-align: center;
+    color: white;
+    bottom: 0px;
+    padding-top: 1em;
+}
+
+.mrJSONPresents {
+    position: relative;
+    font: 2em FingerPaint;
+    color: #DB8A1A;
+    margin-left: 1em;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.mainHeading {
+    position: relative;
+    font: 3em SonsieOne;
+    margin-left: 2em;
+    color: white;
+    white-space: nowrap;
+}
+
+.submitJSON {
+    border: solid black;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    height: 8em;
+    /*float: right;*/
+    /*top: 5em;*/
+    display: inline-block;
+}
+
+.file {
+    margin: auto 1em;
+    padding: 0;
+    text-align: center;
+    border: solid red;
+    width: 7em;
+}
+
+/* Create the animation blocks */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+
+/* Circle behind the spiral */
+#backgroundCircle {
+    position: relative;
+    border-radius: 5em;
+    width: 4em;
+    height: 4em;
+    background-color: black;
+    padding: 0;
+    border: none;
+    margin-top: 5px;
+    display: inline-block;
+    left: 10em;
+    top: 12em;
+    border: solid green;
+}
+
+#backgroundCircle:hover {
+    background-color: #9945B6;
+}
+
+#go {
+    /*border: solid green;*/
+    background: transparent url(./images/spiral.png) 0 0 no-repeat;
+    background-position: center center;
+    position: absolute;
+    border-radius: 2em;
+    width: 4em;
+    height: 4em;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3s; /* 3 seconds */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+#selectJSON {
+    /*height: 100%;*/
+    border: solid black;
+    vertical-align: top;
+}
+#goText {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    color: inherit;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+}
+
+#goSwitch {
+    font: 1em SonsieOne;
+    padding: 0;
+    margin: 0;
+    display: table;
+    height: 100%;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+#goSwitch:hover {
+    font: 1.8em SonsieOne;
+    color: #F08324;
+}
+
+#goSwitch:focus {
+    color: #FC20BC;
+}
+
+.body {
+    position: relative;
+    margin-bottom: 5em;
+    padding-bottom: 5em;
+    left: 3em;
+    background-color: white;
+    width: 60%;
+    height: 200px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    overflow: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    /*padding-bottom: 3em;*/
+    /*border: solid red;*/
+}
+
+#fileSelect {
+    display: none;
+    /*margin: auto auto;*/
+    /*margin-top: 5em;*/
+    background-color: white;
+    position: relative;
+}
+
+#copypasta {
+    display: inline-block;
+}
+
+.optionFileorPaste {
+    border: solid black;
+    /*width: 20%;*/
+    display: inline-block;
+    vertical-align: top;
+
+}

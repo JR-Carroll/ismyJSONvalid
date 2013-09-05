@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mr. JSON Presents:  Is my JSON Valid?</title>
+    <link rel="stylesheet" type="text/css" href="./ismyJSONvalid.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="./ismyJSONvalid.js"></script>
+    <script src="./jsonvalidwebworker.js"></script>
+    <meta name="viewport" content="height=device-height">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mrJSONPresents">Mr. JSON Presents...</div>
+            <div class="mainHeading">Is My JSON Valid?</div>
+        </div>
+        <div class="submitJSON">
+            <button id="backgroundCircle" onClick="loadJSONResults();">
+                <div class="button" id="go"></div>
+                <div class="wrapper" id="goSwitch">
+                    <span id="goText">GO</span>
+                </div>
+            </button>
+            <div class="optionFileorPaste">
+                <select id="selectJSON" onChange="switchJSONFields();">
+                    <option value="pasted">Copy/Paste</option>
+                    <option value="file">Upload File</option>
+                </select>
+            </div>
+            <input type="file" class="pastedJSON" id="fileSelect">
+            <textarea cols="50" rows="5" placeholder="Paste your JSON here" class="pastedJSON" id="copypasta"></textarea>
+        </div>
+        <div class="body" id="returnedJSON">hi</div>
+        <div class="footer">
+            Front- and Back-end developed by J. R. Carroll, jrcarroll@jrcresearch.net.
+            <br />Copyright 2013, J. R. Carroll. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
